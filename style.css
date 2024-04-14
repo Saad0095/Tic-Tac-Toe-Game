@@ -4,23 +4,23 @@
 }
 
 body {
-  background-color: #fddfa7;
-  background-color: #272d31;
-  background-color: #22212c;
+  background-color: #0C0F0A;
+  background-color: #031927;
   text-align: center;
 }
 
 .prompt {
   font-family: 'Times New Roman', Times, serif;
   font-size: 18px;
-  background-color: #7e9893;
   background-color: #5b438d;
+  background-color: #2E86AB;
   padding: 30px;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 4px 1px rgb(0 0 0);
   max-width: 400px;
   margin: 200px auto;
-  color: #fff9f7;  
+  color: #F6F5AE;
+
 }
 
 .prompt label {
@@ -43,8 +43,7 @@ body {
 
 
 main h1 {
-  /* color: black; */
-  color: #fff9f7;
+  color: #F6F5AE;
   margin: 25px;
   font-size: 40px;
 }
@@ -85,8 +84,8 @@ main h1 {
 
 .box {
   background-color: #A5D8FF;
-  background-color: #7e9893;
   background-color: #5b438d;
+  background-color: #2E86AB;
   font-size: 60px;
   border: 2px solid black;
 }
@@ -104,10 +103,15 @@ main h1 {
   margin: 10px;
 }
 
+#startBtn {
+  margin: 10px auto;
+}
+
 .msg {
   font-size: 30px;
   font-weight: 700;
   color: #e9a60a;
+  color: #982649;
   margin: 15px;
   font-family: 'Times New Roman', Times, serif;
 }
@@ -117,6 +121,8 @@ main h1 {
   font-weight: 700;
   margin: 15px;
   color: #fc6501;
+  color: #D999B9;
+
   font-family: 'Times New Roman', Times, serif;
 }
 
@@ -342,4 +348,44 @@ main h1 {
 .button-77:disabled {
   cursor: default;
   opacity: .24;
+}
+
+
+/* CSS */
+.button-72 {
+  align-items: center;
+  background-color: initial;
+  background-image: linear-gradient(rgba(179, 132, 201, .84), rgba(57, 31, 91, .84) 50%);
+  border-radius: 42px;
+  border-width: 0;
+  box-shadow: rgba(57, 31, 91, 0.24) 0 2px 2px,rgba(179, 132, 201, 0.4) 0 8px 12px;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: flex;
+  font-family: Quicksand,sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  justify-content: center;
+  letter-spacing: .04em;
+  line-height: 16px;
+  margin: 0;
+  padding: 18px 18px;
+  text-align: center;
+  text-decoration: none;
+  text-shadow: rgba(255, 255, 255, 0.4) 0 0 4px,rgba(255, 255, 255, 0.2) 0 0 12px,rgba(57, 31, 91, 0.6) 1px 1px 4px,rgba(57, 31, 91, 0.32) 4px 4px 16px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+}
+
+.button-72:hover {
+  background-image: linear-gradient(#B384C9, #391F5B 50%);
+}
+
+@media (min-width: 768px) {
+  .button-72 {
+    font-size: 21px;
+    padding: 18px 34px;
+  }
 }

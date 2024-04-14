@@ -6,6 +6,8 @@ let startGameBtn = document.querySelector("#startBtn");
 let mainDisplay = document.querySelector(".mainDisp");
 let InitialDisplay = document.querySelector(".initialInput");
 let dispTurn = document.querySelector(".turn");
+let audio = new Audio('audio_file.mp3');
+
 
 let player1Name = "";
 let player2Name = "";
@@ -19,7 +21,7 @@ function startGame() {
   } else {
     mainDisplay.classList.remove("hide");
     InitialDisplay.classList.add("hide");
-    dispTurn.innerHTML = `${player1Name}'s turn`; 
+    dispTurn.innerHTML = `${player1Name}'s turn`;
   }
 }
 
@@ -46,15 +48,13 @@ boxes.forEach((box) => {
         box.innerText = "X";
         turnX = false;
         box.style.color = "black";
-        // box.style.color = "#d4a909";
-        box.style.color = "#edc321";
+        box.style.color = "#A8201A";
         dispTurn.innerHTML = `${player2Name}'s turn`;
       } else {
         box.innerText = "O";
         turnX = true;
         box.style.color = "white";
-        // box.style.color = "#edc321";
-        box.style.color = "#ffb011";
+        box.style.color = "#F5F749";
         dispTurn.innerHTML = `${player1Name}'s turn`;
       }
       count += 1;
@@ -96,6 +96,7 @@ function showWinner(winner) {
   } else {
     msg.innerHTML = `${player2Name} won!`;
   }
+  audio.play();
 }
 
 function disableBoxes() {
@@ -113,13 +114,15 @@ function enableBoxes() {
 
 function resetGame() {
   turnX = true;
+  audio.pause();
+  audio.currentTime = 0;
   enableBoxes();
   msg.classList.add("hide");
   dispTurn.classList.remove("hide");
   newGameBtn.parentElement.classList.add("hide");
   count = 0;
   console.log("game reseted");
-  dispTurn.innerHTML = `${player1Name}'s turn`; 
+  dispTurn.innerHTML = `${player1Name}'s turn`;
 }
 
 newGameBtn.addEventListener("click", resetGame);
